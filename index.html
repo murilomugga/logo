@@ -2,39 +2,25 @@
 <html>
 <head>
 <style>
-	html { height: 100%; }
-	body {background:url(logo_bg.jpg) no-repeat center center fixed; background-size:cover; width:500px; height: 100%; }
-	.flip-box {
-		margin:-200px;
-		position:absolute;
-		top:50%;
-		left:50%;
-		width: 400px;
-		height: 400px;
-		perspective: 1000px;
-	}
+/* reset */
+* { margin:0; padding:0; border:0 none; outline:0; vertical-align:baseline; background:transparent; text-decoration:none; font:inherit; list-style:none; quotes:none; border-collapse:collapse; border-spacing:0; resize:none; box-sizing:border-box; letter-spacing:0px; color:inherit; text-align:inherit; }
+@-ms-viewport { width:extend-to-zoom; zoom:1.0; }
+a { cursor:pointer; }
+:focus { outline:0; }
+::-ms-clear { display: none;}
 
-	.flip-box-inner {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		transition: transform 1s;
-		transform-style: preserve-3d;
-	}
-
-	.flip-box:hover .flip-box-inner {
-		transform: rotateX(180deg);
-	}
-	img { filter: brightness(0); opacity:0.9; }
-
+/* geral */
+html { height:100%; }
+body { height:100%; width:100%; min-width:400px; text-align:center; background:url(logo_bg.jpg) no-repeat center center fixed; background-size:cover; }
+body:before { content:'\200B'; display:inline-block; height:100%; vertical-align: middle; }
+	body>div { max-width:calc(100% - 30px); width:400px; margin:auto; vertical-align:middle; display:inline-block; perspective:1000px; }
+		img { position:relative; width:100%; height:100%; transition:transform 1s; transform-style:preserve-3d; opacity:0.9; }
+		div:hover img { transform: rotateX(180deg); }
 </style>
 </head>
 <body>
-<div class="flip-box">
-  <div class="flip-box-inner">
-      <img src="logo.png">
-  </div>
+<div>
+	<img src="logo.png">
 </div>
 
 </body>
