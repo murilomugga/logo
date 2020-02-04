@@ -26,12 +26,12 @@ body:before { content:'\200B'; display:inline-block; height:100%; vertical-align
 	function clica() {
 		console.log(1);
 		document.getElementById('img').classList.add('vira');
-		setTimeout(function(){ desclica() }, 3000);
+		setTimeout(function(){ desclica() }, 5000);
 	}
 	function desclica() {
 		console.log(2);
 		document.getElementById('img').classList.remove('vira');
-		setTimeout(function(){ clica() }, 3000);
+		setTimeout(function(){ clica() }, 5000);
 	}
 	desclica();
 </script>
